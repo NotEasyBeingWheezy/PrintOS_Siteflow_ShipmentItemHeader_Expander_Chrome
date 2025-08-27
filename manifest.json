@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Siteflow Section Expander",
+  "version": "1.0",
+  "description": "Expand collapsible shipment item headers on PrintOS website",
+  
+  "permissions": [
+    "activeTab"
+  ],
+  
+  "host_permissions": [
+    "https://ofui.www.printos.com/*"
+  ],
+  
+  "content_scripts": [
+    {
+      "matches": ["https://ofui.www.printos.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Expand Shipment Sections"
+  }
+  
+
+}
